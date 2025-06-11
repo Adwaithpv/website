@@ -1,4 +1,3 @@
-import { motion } from 'framer-motion';
 import styles from './About.module.css'; // Reusing About.module.css for general styling
 
 const AboutMeDetails = () => (

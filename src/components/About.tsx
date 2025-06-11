@@ -1,4 +1,3 @@
-import { motion } from 'framer-motion';
 import styles from './About.module.css';
 import userProfile from '../assets/user-profile.jpg'; // Placeholder for the profile image
 
