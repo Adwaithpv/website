@@ -16,4 +16,352 @@
 
 .card {
   position: relative;
+}
+
+.about {
+  padding: 8rem 0 4rem 0;
+  background-color: var(--color-bg);
+  position: relative;
+  overflow: hidden;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  gap: 3rem;
+}
+
+.leftCol {
+  flex: 1;
+  text-align: left;
+  z-index: 1;
+}
+
+.greeting {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: 0.5rem;
+  line-height: 1.1;
+}
+
+.name {
+  font-size: 4.5rem;
+  font-weight: 800;
+  color: var(--color-text);
+  margin-bottom: 1.5rem;
+  line-height: 1.1;
+}
+
+.highlight {
+  color: var(--color-primary);
+}
+
+.description {
+  font-size: 1.3rem;
+  color: var(--color-text-alt);
+  line-height: 1.6;
+  margin-bottom: 2.5rem;
+  max-width: 550px;
+}
+
+.buttons {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.getInTouchButton {
+  background-color: var(--color-primary);
+  color: white;
+  padding: 0.9rem 1.8rem;
+  border-radius: 0.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: background-color 0.3s ease;
+}
+
+.getInTouchButton:hover {
+  background-color: var(--color-accent);
+}
+
+.arrowIcon {
+  font-size: 1.5rem;
+}
+
+.downloadCVButton {
+  background-color: transparent;
+  color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+  padding: 0.9rem 1.8rem;
+  border-radius: 0.5rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.downloadCVButton:hover {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+.rightCol {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 0;
+  min-height: 500px;
+  min-width: 500px;
+}
+
+.profileImage {
+  width: 100%;
+  max-width: 450px;
+  height: auto;
+  border-radius: 1.5rem;
+  object-fit: cover;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  z-index: 2;
+  position: relative;
+}
+
+.badge1 {
+  position: absolute;
+  background-color: var(--color-card);
+  padding: 0.8rem 1.2rem;
+  border-radius: 0.8rem;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--color-text);
+  top: 15%;
+  left: 65%;
+  transform: rotate(5deg);
+  z-index: 3;
+}
+
+.badge2 {
+  position: absolute;
+  background-color: var(--color-card);
+  padding: 0.8rem 1.2rem;
+  border-radius: 0.8rem;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--color-text);
+  bottom: 20%;
+  left: 40%;
+  transform: rotate(-8deg);
+  z-index: 3;
+}
+
+.shape1 {
+  position: absolute;
+  width: 250px;
+  height: 250px;
+  background-color: var(--color-accent);
+  border-radius: 50%;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0.7;
+  z-index: 1;
+  filter: blur(80px);
+}
+
+.shape2 {
+  position: absolute;
+  width: 180px;
+  height: 180px;
+  background-color: var(--color-primary);
+  border-radius: 50%;
+  bottom: 5%;
+  right: 10%;
+  transform: translate(50%, 50%);
+  opacity: 0.6;
+  z-index: 1;
+  filter: blur(70px);
+}
+
+.shape3 {
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  background-color: var(--color-secondary);
+  border-radius: 50%;
+  top: 50%;
+  left: 10%;
+  transform: translate(-50%, -50%);
+  opacity: 0.5;
+  z-index: 1;
+  filter: blur(60px);
+}
+
+.shape4 {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  background-color: var(--color-text-alt);
+  border-radius: 50%;
+  bottom: 10%;
+  left: 20%;
+  opacity: 0.7;
+  z-index: 1;
+  filter: blur(50px);
+}
+
+@media (max-width: 1024px) {
+  .content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .leftCol {
+    margin-bottom: 2rem;
+  }
+
+  .greeting {
+    font-size: 3rem;
+  }
+
+  .name {
+    font-size: 4rem;
+  }
+
+  .description {
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .buttons {
+    justify-content: center;
+  }
+
+  .rightCol {
+    min-width: unset;
+    min-height: unset;
+    padding-top: 3rem;
+  }
+
+  .profileImage {
+    max-width: 350px;
+  }
+
+  .badge1 {
+    top: 5%;
+    left: 70%;
+  }
+
+  .badge2 {
+    bottom: 5%;
+    left: 20%;
+  }
+}
+
+@media (max-width: 768px) {
+  .about {
+    padding: 6rem 0 3rem 0;
+  }
+
+  .greeting {
+    font-size: 2.5rem;
+  }
+
+  .name {
+    font-size: 3.5rem;
+  }
+
+  .description {
+    font-size: 1.1rem;
+  }
+
+  .buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .getInTouchButton,
+  .downloadCVButton {
+    width: 80%;
+    padding: 0.7rem 1rem;
+    font-size: 1rem;
+  }
+
+  .profileImage {
+    max-width: 300px;
+  }
+
+  .badge1 {
+    top: 0%;
+    left: 60%;
+    font-size: 0.9rem;
+    padding: 0.6rem 1rem;
+  }
+
+  .badge2 {
+    bottom: 0%;
+    left: 10%;
+    font-size: 0.9rem;
+    padding: 0.6rem 1rem;
+  }
+
+  .shape1,
+  .shape2,
+  .shape3,
+  .shape4 {
+    filter: blur(40px);
+  }
+}
+
+@media (max-width: 480px) {
+  .about {
+    padding: 4rem 0 2rem 0;
+  }
+
+  .greeting {
+    font-size: 2rem;
+  }
+
+  .name {
+    font-size: 3rem;
+  }
+
+  .description {
+    font-size: 1rem;
+  }
+
+  .getInTouchButton,
+  .downloadCVButton {
+    width: 90%;
+  }
+
+  .profileImage {
+    max-width: 250px;
+  }
+
+  .badge1 {
+    top: -5%;
+    left: 55%;
+    font-size: 0.8rem;
+    padding: 0.5rem 0.8rem;
+  }
+
+  .badge2 {
+    bottom: -5%;
+    left: 5%;
+    font-size: 0.8rem;
+    padding: 0.5rem 0.8rem;
+  }
 } 

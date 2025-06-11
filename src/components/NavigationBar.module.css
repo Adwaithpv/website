@@ -1,52 +1,42 @@
 .navbar {
   position: sticky;
   top: 0;
-  z-index: 100;
+  z-index: 1000;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: var(--color-bg-alt);
-  padding: 1rem 2rem;
-  box-shadow: 0 2px 16px 0 rgba(0,0,0,0.12);
-  border-radius: 0 0 var(--border-radius) var(--border-radius);
-  margin-bottom: 2rem;
+  background: var(--color-bg);
+  padding: 1rem 3rem;
+  box-shadow: none;
+  border-radius: 0;
+  margin-bottom: 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .left {
   display: flex;
-  flex-direction: column;
-  gap: 0.3rem;
-}
-
-.name {
-  font-size: 1.5rem;
-  font-weight: 700;
-  color: var(--color-primary);
-}
-
-.contactInfo {
-  display: flex;
   align-items: center;
-  gap: 0.5rem;
-  font-size: 1rem;
-  color: var(--color-text-alt);
+  gap: 0;
 }
 
-.contactInfo img {
-  width: 20px;
-  height: 20px;
-  object-fit: contain;
+.logo {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--color-text);
+  margin-right: 2rem;
 }
 
 .links {
   display: flex;
-  gap: 1.5rem;
+  gap: 2rem;
   align-items: center;
+  flex-grow: 1;
+  justify-content: center;
   transition: max-height 0.3s;
 }
 
 .links a {
-  color: var(--color-text);
+  color: var(--color-text-alt);
   text-decoration: none;
   font-weight: 500;
   font-size: 1.1rem;
@@ -57,6 +47,29 @@
   color: var(--color-primary);
 }
 
+.right {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.lang {
+  color: var(--color-text-alt);
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
+  filter: grayscale(1) brightness(1.8);
+  transition: filter 0.2s;
+}
+
+.icon:hover {
+  filter: none;
+}
+
 .hamburger {
   display: none;
   flex-direction: column;
@@ -65,6 +78,7 @@
   border: none;
   cursor: pointer;
   margin-left: 1rem;
+  padding: 0.5rem;
 }
 
 .bar, .barOpen {
@@ -78,9 +92,13 @@
 
 @media (max-width: 900px) {
   .navbar {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 1rem;
+    flex-direction: row;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    justify-content: space-between;
+  }
+  .left {
+    margin-right: auto;
   }
   .links {
     flex-direction: column;
@@ -91,6 +109,10 @@
     border-radius: 0 0 var(--border-radius) var(--border-radius);
     margin-top: 0.5rem;
     gap: 1rem;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    box-shadow: 0 2px 16px 0 rgba(0,0,0,0.12);
   }
   .links.open {
     max-height: 400px;
@@ -98,5 +120,20 @@
   }
   .hamburger {
     display: flex;
+  }
+  .right {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar {
+    padding: 0.8rem 1rem;
+  }
+  .logo {
+    font-size: 1.5rem;
+  }
+  .links a {
+    font-size: 1rem;
   }
 } 

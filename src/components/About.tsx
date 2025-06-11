@@ -1,32 +1,36 @@
 import { motion } from 'framer-motion';
 import styles from './About.module.css';
+import userProfile from '../assets/user-profile.jpg'; // Placeholder for the profile image
 
 const About = () => (
-  <section className={styles.about} id="about">
-    <h2 className={styles.sectionTitle}>About Me <span role="img" aria-label="wave">👋</span></h2>
-    <motion.div
-      className={styles.card}
-      initial={{ opacity: 0, y: 40 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6 }}
-    >
+  <section className={styles.about} id="home">
+    <div className={styles.content}>
       <div className={styles.leftCol}>
-        <div className={styles.bigName}>Adwaith PV <span className={styles.emoji}>🚀</span></div>
-        <div className={styles.role}>AI/ML Intern & B.Tech Student</div>
-      </div>
-      <motion.div
-        className={styles.rightCol}
-        initial={{ opacity: 0, x: 40 }}
-        whileInView={{ opacity: 1, x: 0 }}
-        transition={{ duration: 0.7, delay: 0.2 }}
-      >
-        <p className={styles.summary}>
-          Hey there! I'm Adwaith, an AI/ML Intern at Turn2Law and a B.Tech student in Computer Science (Big Data Analytics) at SRM Institute of Science & Technology (2023-2027), based in Chennai, Tamilnadu. I love building smart things with code—whether it's AI, web apps, or cloud projects, I'm always up for a challenge and a good cup of coffee ☕. Fun fact: I can solve a Rubik's cube in under a minute! 🧩<br /><br />
-          Feel free to reach out at <a href="mailto:adwaith.pv@gmail.com">adwaith.pv@gmail.com</a> or connect on <a href="https://linkedin.com/in/adwaithpv" target="_blank" rel="noopener noreferrer">LinkedIn</a>.
+        <h1 className={styles.greeting}>Hi,</h1>
+        <h1 className={styles.name}>I am <span className={styles.highlight}>James Ross</span></h1>
+        <p className={styles.description}>
+          Product and Visual interface designer in Google. Specialize in UI/UX and product development & responsive web design.
         </p>
-        <div className={styles.bgAccent} aria-hidden="true">🌈</div>
-      </motion.div>
-    </motion.div>
+        <div className={styles.buttons}>
+          <button className={styles.getInTouchButton}>
+            Get in touch <span className={styles.arrowIcon}>→</span>
+          </button>
+          <button className={styles.downloadCVButton}>
+            Download CV
+          </button>
+        </div>
+      </div>
+      <div className={styles.rightCol}>
+        <img src={userProfile} alt="James Ross" className={styles.profileImage} />
+        <div className={styles.badge1}>UI/UX Designer<br />5 years experience</div>
+        <div className={styles.badge2}>Google Certified Designer</div>
+        {/* Abstract shapes from screenshot */}
+        <div className={styles.shape1}></div>
+        <div className={styles.shape2}></div>
+        <div className={styles.shape3}></div>
+        <div className={styles.shape4}></div>
+      </div>
+    </div>
   </section>
 );
 
