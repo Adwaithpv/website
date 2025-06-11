@@ -1,0 +1,74 @@
+.experience {
+  text-align: center;
+}
+
+.experience h2 {
+  color: var(--color-primary);
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+}
+
+.card {
+  background: var(--color-card);
+  border-radius: var(--border-radius);
+  box-shadow: 0 2px 16px 0 rgba(127,90,240,0.10);
+  padding: 1.5rem 2rem;
+  width: 500px;
+  text-align: left;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.card:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 6px 24px 0 rgba(127,90,240,0.18);
+}
+
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  align-items: baseline;
+  margin-bottom: 0.7rem;
+}
+
+.role {
+  color: var(--color-accent);
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.company {
+  color: var(--color-primary);
+  font-weight: 500;
+  font-size: 1.05rem;
+}
+
+.period {
+  color: var(--color-text-alt);
+  font-size: 0.98rem;
+  margin-left: auto;
+}
+
+.card p {
+  color: var(--color-text-alt);
+  font-size: 1.05rem;
+  margin: 0;
+}
+
+@media (max-width: 700px) {
+  .card {
+    width: 95vw;
+    padding: 1rem 0.5rem;
+  }
+  .header {
+    flex-direction: column;
+    gap: 0.3rem;
+  }
+} 

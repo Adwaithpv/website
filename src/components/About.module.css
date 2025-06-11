@@ -1,0 +1,19 @@
+.emoji {
+  font-size: 2rem;
+  margin-left: 0.3rem;
+  vertical-align: middle;
+}
+
+.bgAccent {
+  position: absolute;
+  right: 1.5rem;
+  bottom: 1.2rem;
+  font-size: 2.5rem;
+  opacity: 0.18;
+  pointer-events: none;
+  user-select: none;
+}
+
+.card {
+  position: relative;
+} 
