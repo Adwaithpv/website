@@ -11,10 +11,22 @@ const About = () => (
         AI/ML Engineer and Computer Science student specializing in Big Data Analytics. Expert in machine learning, computer vision, and building intelligent systems that solve real-world problems.
         </p>
         <div className={styles.buttons}>
-          <button className={styles.getInTouchButton}>
+          <button className={styles.getInTouchButton} onClick={() => {
+            const contactSection = document.getElementById('contact');
+            if (contactSection) {
+              contactSection.scrollIntoView({ behavior: 'smooth' });
+            }
+          }}>
             Get in touch <span className={styles.arrowIcon}>→</span>
           </button>
-          <button className={styles.downloadCVButton}>
+          <button className={styles.downloadCVButton} onClick={() => {
+            const link = document.createElement('a');
+            link.href = '/Adwaith_pv_resume1.pdf';
+            link.download = 'Adwaith_Resume.pdf';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+          }}>
             Download CV
           </button>
         </div>
