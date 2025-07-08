@@ -6,7 +6,7 @@ const education = [
     degree: 'B.Tech in Computer Science (Big Data Analytics)',
     school: 'SRM Institute Of Science & Technology, Kattankulathur, Tamilnadu',
     period: 'Jun 2023 - May 2027',
-    details: 'CGPA: 9.05',
+    details: 'CGPA: 9.40',
   },
   {
     degree: 'Higher Secondary',
